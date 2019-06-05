@@ -1,18 +1,19 @@
 import React from 'react';
-import { Button, View, Text } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { Container, Header, Content, Footer, FooterTab, Button, Text } from 'native-base';
+
+import EditOptionsFooter from '../../../app/components/footers/EditOptionsFooter';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Welcome',
+    title: 'Edit Media',
   };
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <Button
-        title="Go to Jane's profile"
-        onPress={() => navigate('Profile', {name: 'Jane'})}
-      />
+      <React.Fragment>
+        <EditOptionsFooter />
+      </React.Fragment>
     );
   }
 }
